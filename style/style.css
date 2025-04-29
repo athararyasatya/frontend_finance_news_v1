@@ -73,6 +73,11 @@ form i {
     height: 100%;
 }
 
+.border-top .border-bottom{
+  border-top: 4px solid #6c757d;
+  border-bottom: 4px solid #6c757d;
+}
+
 /* Kartu cabai */
 .pangan-item {
     background: #f8f9fa;
@@ -96,6 +101,13 @@ form i {
     padding-bottom: 1rem;
     scrollbar-width: thin;
  }
+
+ .btn-baca-selengkapnya {
+  font-size: 0.8rem;
+  padding: 10px 25px;
+  border-radius: 20px;
+}
+
  
 
 /* ================= BUTTONS ================= */
@@ -201,7 +213,44 @@ form i {
     justify-content: center;
     height: 100%;
   }
+  .custom-stock-card {
+    border: 1px solid #ddd;
+    padding: 12px;
+    border-radius: 8px;
+    min-width: 150px;
+    text-align: center;
+    flex: 1 1 150px;
+  }
 
+  .stock-title {
+    font-weight: bold;
+  }
+
+  .stock-price {
+    font-size: 1.2em;
+    margin-bottom: 4px;
+  }
+
+  .stock-change {
+    font-size: 0.9em;
+  }
+
+  .btn-kecil {
+    font-size: 0.8rem;
+    padding: 10px 25px;
+    width: fit-content; 
+    margin-top: 1.5rem;
+    background-color: #f3363f;
+  }
+  
+
+  .stock-nav {
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    padding-left: 5px;
+  }
 
 
 /* indikator scrol di ilangin */
@@ -215,8 +264,36 @@ form i {
   .overflow-auto::-webkit-scrollbar-track {
     background: transparent;
   }
+/* explore berita */
+  .custom-card {
+    border: 1.5px solid #ccc;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
 
+  .custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .small-badge {
+    font-size: 0.65rem;
+    width: fit-content;
+  }
   
+  footer {
+    background-color: #f2f2f2;
+    padding: 40px 0;
+  }
+  .card h6 {
+    font-size: 0.95rem;
+    line-height: 1.3;
+  }
+  .card p {
+    font-size: 0.8rem;
+  }
+  .logo-footer {
+    height: 50px;
+  }
 
 
 
@@ -292,6 +369,77 @@ form i {
         background-color: #f3363f;
         
     }
+    
+    /* biar ga nempel konten infosaham sama berita terkini */
+    .gyaaat, .latest-news{
+      max-height: 522px;
+    }
+
+
+  
+
+    /* info saham */
+
+   
+
+    #stock-cards .card-saham {
+      min-width: 200px;
+      flex-shrink: 0;
+    }
+
+    .card-saham:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      z-index: 10;
+      position: relative;
+    }
+
+    .btn-kecil {
+      font-size: 0.8rem;
+      padding: 10px 15px;
+      
+    }
+
+
+    #info{
+      margin-bottom: 30px;
+    }
+
+/* Hover card fix: jangan terpotong */
+#stock-cards .card {
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+#stock-cards .card:hover {
+  transform: scale(1.05);
+  z-index: 10; /* agar tidak terpotong */
+}
+
+/* Scroll bar bawah */
+#stock-cards::-webkit-scrollbar {
+  height: 6px;
+}
+#stock-cards::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+#stock-cards::-webkit-scrollbar-track {
+  background: transparent;
+}
+.info-saham-wrapper {
+  margin-top: 1rem; /* atau lebih */
+}
+
+.sidebar-wrapper {
+  margin-bottom: 3.5rem;
+}
+
+
+    
+    
 }
 
 

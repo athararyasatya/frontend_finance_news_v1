@@ -66,7 +66,7 @@
       </div>
 
 <!-- Wrapper Info Pangan -->
-    <div class="container my-5 py-5 border-top border-bottom" style="border-top-width: 10px; border-bottom-width: 10px;">
+    <div class="container my-5  py-5 " style="border-top: 2px solid #a9acb0; border-bottom: 2px solid #a9acb0 ; ">
       <div class="row align-items-start">
         <!-- Kiri: Judul + Deskripsi -->
         <div class="col-md-4 mb-3">
@@ -74,7 +74,8 @@
             <p class="text-muted mb-1"><strong>Last Update:</strong> Minggu, 23 Maret 2025</p>
             <p class="text-muted mb-3"><strong>Sumber:</strong> Info Pangan Jakarta</p>
             <!-- Tombol untuk Desktop -->
-            <a href="#" class="btn btn-danger rounded-pill fw-bold d-none d-md-inline-block">Baca Selengkapnya</a>
+            <a href="#" class="btn btn-danger fw-bold btn-baca-selengkapnya d-none d-md-inline-block">Baca Selengkapnya</a>
+ 
         </div>
             <!-- Kanan: Scrollable Cards -->
             <div class="col-md-8">
@@ -133,8 +134,8 @@
     </div>
 
     <!-- Sidebar berita terkini -->
-    <div class="col-lg-4 d-flex flex-column"style="max-height: 500px;">
-      <div class="card p-5 flex-grow-1">
+    <div class="col-lg-4 mb-4 d-flex flex-column sidebar-wrapper" style="max-height: 500px;">
+      <div class="card gyaaat  p-5 flex-grow-1 mb-3">
         <h5 class="fw-bold mb-3">Berita Terkini</h5>
         <div class="latest-news overflow-auto" style="max-height: 740px;">
           <!-- Berita Item -->
@@ -235,7 +236,7 @@
               <h6 class="fw-bold mb-1">Judul Berita Singkat</h6>
               <div class="d-flex align-items-center mb-1">
                 <span class="badge bg-danger me-2">Kategori</span>
-                <small class="text-muted">3 jam lalu</small>
+                <small class="text-muted">3 jam lalu</small> 
               </div>
               <small>Deskripsi singkat berita...</small><br>
               <small class="text-primary">Baca Selengkapnya</small>
@@ -249,74 +250,334 @@
   </div>
 </div>
 
-<div class="container my-5">
-    <div class="card p-4">
-      <div class="row align-items-center">
-        <div class="col-md-3 mb-4">
-          <div class="info-saham-wrapper">
-            <h5 class="fw-bold mb-3">Info Saham</h5>
-            <p class="mb-1"><strong>Last Update:</strong> Minggu, 23 Maret 2025</p>
-            <p class="mb-1"><strong>Sumber:</strong> Info Pangan Jakarta</p>
-            <a href="#" class="btn btn-danger rounded-pill fw-bold mt-3">Baca Selengkapnya</a>
-          </div>
+<div class="container my-2 mt-5 mt-md-0">
+  <div class="card p-4">
+    <div class="row align-items-stretch">
+      <!-- Kiri -->
+      <div class="col-md-3 mb-4 d-flex flex-column justify-content-between">
+        <div class="info-saham-wrapper">
+          <h5 class="fw-bold mb-3">Info Saham</h5>
+          <p class="mb-1"><strong>Last Update:</strong> Minggu, 23 Maret 2025</p>
+          <p class="mb-1"><strong>Sumber:</strong> Info Pangan Jakarta</p>
+          <a href="#" class="btn btn btn-danger fw-bold rounded-pill  btn-kecil mt-4 d-none d-md-inline-block" >Baca Selengkapnya</a>
         </div>
-        <div class="col-md-9">
-          <div class="d-flex mb-3" style="gap: 20px; flex-wrap: wrap;">
-            <a href="#" class="text-dark fw-bold text-decoration-none">MAJOR INDEXES</a> |
-            <a href="#" class="text-muted fw-bold text-decoration-none">INDO-FX</a> |
-            <a href="#" class="text-muted fw-bold text-decoration-none">USD-FX</a> |
-            <a href="#" class="text-muted fw-bold text-decoration-none">COMMODITIES</a>
-          </div>
-          <div class="d-flex flex-wrap gap-3" id="stock-cards">
-            <!-- Card Saham -->
-          </div>
+      </div>
+
+      <!-- Kanan -->
+      <div class="col-md-9 d-flex flex-column justify-content-between overflow-visible">
+        <div class="d-flex stock-nav ps-md-4 ps-3">
+          <a href="#" class="text-dark fw-bold text-decoration-none">MAJOR INDEXES</a> |
+          <a href="#" class="text-muted fw-bold text-decoration-none">INDO-FX</a> |
+          <a href="#" class="text-muted fw-bold text-decoration-none">USD-FX</a> |
+          <a href="#" class="text-muted fw-bold text-decoration-none">COMMODITIES</a>
+        </div>
+
+        
+        <div class="d-flex flex-md-wrap flex-nowrap overflow-auto gap-3 mt-3" id="stock-cards">
+
+          <!-- Card Saham -->
+        </div>
+
+        <!-- Tombol hanya tampil di mobile -->
+        <div class="mt-3 ps-3 d-block d-md-none">
+          <a href="#" class="btn btn-danger fw-bold rounded-pill btn-kecil">
+            Baca Selengkapnya
+          </a>
         </div>
       </div>
     </div>
   </div>
-  </div>
-  
-  
+</div>
   
   
 
 
 <!-- Explore Berita -->
-<div class="container my-5">
-    <h2 class="fw-bold text-center mb-4">Explore Berita</h2>
-  
-    <div class="row g-4">
-      <!-- Card Berita -->
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100">
-          <img src="assets/mainberita.png" class="card-img-top" alt="Berita">
-          <div class="card-body d-flex flex-column">
-            <h6 class="fw-bold">Title berita Title berita Title berita...</h6>
-            <p class="text-muted small mb-3">Deskripsi singkat berita atau info menarik tentang isi berita ini...</p>
-            <div class="mt-auto">
-              <a href="#" class="btn btn-link text-danger fw-bold p-0">Baca Selengkapnya</a>
+
+<div class="container my-5 mt">
+  <h2 class="fw-bold text-center mb-4">Explore Berita</h2>
+  <div class="row g-4">
+
+    <!-- Card Berita -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card h-100 custom-card">
+        <img src="assets/mainberita.png" class="card-img-top" alt="Berita">
+        <div class="card-body d-flex flex-column">
+          <h6 class="fw-bold mb-2">Judul Berita Utama Tentang Ekonomi dan Pasar</h6>
+          <span class="badge bg-danger text-white fw-normal mb-2 small-badge">Ekonomi</span>
+          <p class="text-muted small mb-4">Deskripsi singkat isi berita yang menggambarkan isi utama dari berita ini secara umum dan menarik perhatian.</p>
+          <div class="mt-auto d-flex justify-content-between align-items-center pt-2 border-top" style="font-size: 0.75rem;">
+            <div class="text-muted">
+              <strong>Dewi Anggraini</strong><br>
+              <span class="text-muted">3 jam yang lalu</span>
             </div>
+            <a href="#" class="text-danger fw-semibold text-decoration-none">Baca Selengkapnya</a>
           </div>
         </div>
       </div>
-  
-      <!-- Duplikasikan div col-12 col-sm-6 col-md-4 col-lg-3 untuk berita lainnya -->
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100">
-          <img src="assets/mainberita.png" class="card-img-top" alt="Berita">
-          <div class="card-body d-flex flex-column">
-            <h6 class="fw-bold">Title berita Title berita Title berita...</h6>
-            <p class="text-muted small mb-3">Deskripsi singkat berita atau info menarik tentang isi berita ini...</p>
-            <div class="mt-auto">
-              <a href="#" class="btn btn-link text-danger fw-bold p-0">Baca Selengkapnya</a>
+    </div>
+
+    <!-- Duplikat -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3" style=" border-radius: 20px;">
+      <div class="card h-100 custom-card" >
+        <img src="assets/mainberita.png" class="card-img-top" alt="Berita">
+        <div class="card-body d-flex flex-column">
+          <h6 class="fw-bold mb-2">Pergerakan Saham Hari Ini Turun Drastis</h6>
+          <span class="badge bg-primary text-white fw-normal mb-2 small-badge">Pasar Saham</span>
+          <p class="text-muted small mb-4">Analis menjelaskan penyebab turunnya indeks saham akibat berbagai faktor global dan lokal.</p>
+          <div class="mt-auto d-flex justify-content-between align-items-center pt-2 border-top" style="font-size: 0.75rem;">
+            <div class="text-muted">
+              <strong>Rizky Putra</strong><br>
+              <span class="text-muted">2 jam yang lalu</span>
             </div>
+            <a href="#" class="text-danger fw-semibold text-decoration-none">Baca Selengkapnya</a>
           </div>
         </div>
       </div>
-  
-      <!-- Tambah lagi card-card lainnya sebanyak yang kamu mau -->
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3" style=" border-radius: 20px;">
+      <div class="card h-100 custom-card" >
+        <img src="assets/mainberita.png" class="card-img-top" alt="Berita">
+        <div class="card-body d-flex flex-column">
+          <h6 class="fw-bold mb-2">Pergerakan Saham Hari Ini Turun Drastis</h6>
+          <span class="badge bg-primary text-white fw-normal mb-2 small-badge">Pasar Saham</span>
+          <p class="text-muted small mb-4">Analis menjelaskan penyebab turunnya indeks saham akibat berbagai faktor global dan lokal.</p>
+          <div class="mt-auto d-flex justify-content-between align-items-center pt-2 border-top" style="font-size: 0.75rem;">
+            <div class="text-muted">
+              <strong>Rizky Putra</strong><br>
+              <span class="text-muted">2 jam yang lalu</span>
+            </div>
+            <a href="#" class="text-danger fw-semibold text-decoration-none">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3" style=" border-radius: 20px;">
+      <div class="card h-100 custom-card" >
+        <img src="assets/mainberita.png" class="card-img-top" alt="Berita">
+        <div class="card-body d-flex flex-column">
+          <h6 class="fw-bold mb-2">Pergerakan Saham Hari Ini Turun Drastis</h6>
+          <span class="badge bg-primary text-white fw-normal mb-2 small-badge">Pasar Saham</span>
+          <p class="text-muted small mb-4">Analis menjelaskan penyebab turunnya indeks saham akibat berbagai faktor global dan lokal.</p>
+          <div class="mt-auto d-flex justify-content-between align-items-center pt-2 border-top" style="font-size: 0.75rem;">
+            <div class="text-muted">
+              <strong>Rizky Putra</strong><br>
+              <span class="text-muted">2 jam yang lalu</span>
+            </div>
+            <a href="#" class="text-danger fw-semibold text-decoration-none">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3" style=" border-radius: 20px;">
+      <div class="card h-100 custom-card" >
+        <img src="assets/mainberita.png" class="card-img-top" alt="Berita">
+        <div class="card-body d-flex flex-column">
+          <h6 class="fw-bold mb-2">Pergerakan Saham Hari Ini Turun Drastis</h6>
+          <span class="badge bg-primary text-white fw-normal mb-2 small-badge">Pasar Saham</span>
+          <p class="text-muted small mb-4">Analis menjelaskan penyebab turunnya indeks saham akibat berbagai faktor global dan lokal.</p>
+          <div class="mt-auto d-flex justify-content-between align-items-center pt-2 border-top" style="font-size: 0.75rem;">
+            <div class="text-muted">
+              <strong>Rizky Putra</strong><br>
+              <span class="text-muted">2 jam yang lalu</span>
+            </div>
+            <a href="#" class="text-danger fw-semibold text-decoration-none">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3" style=" border-radius: 20px;">
+      <div class="card h-100 custom-card" >
+        <img src="assets/mainberita.png" class="card-img-top" alt="Berita">
+        <div class="card-body d-flex flex-column">
+          <h6 class="fw-bold mb-2">Pergerakan Saham Hari Ini Turun Drastis</h6>
+          <span class="badge bg-primary text-white fw-normal mb-2 small-badge">Pasar Saham</span>
+          <p class="text-muted small mb-4">Analis menjelaskan penyebab turunnya indeks saham akibat berbagai faktor global dan lokal.</p>
+          <div class="mt-auto d-flex justify-content-between align-items-center pt-2 border-top" style="font-size: 0.75rem;">
+            <div class="text-muted">
+              <strong>Rizky Putra</strong><br>
+              <span class="text-muted">2 jam yang lalu</span>
+            </div>
+            <a href="#" class="text-danger fw-semibold text-decoration-none">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3" style=" border-radius: 20px;">
+      <div class="card h-100 custom-card" >
+        <img src="assets/mainberita.png" class="card-img-top" alt="Berita">
+        <div class="card-body d-flex flex-column">
+          <h6 class="fw-bold mb-2">Pergerakan Saham Hari Ini Turun Drastis</h6>
+          <span class="badge bg-primary text-white fw-normal mb-2 small-badge">Pasar Saham</span>
+          <p class="text-muted small mb-4">Analis menjelaskan penyebab turunnya indeks saham akibat berbagai faktor global dan lokal.</p>
+          <div class="mt-auto d-flex justify-content-between align-items-center pt-2 border-top" style="font-size: 0.75rem;">
+            <div class="text-muted">
+              <strong>Rizky Putra</strong><br>
+              <span class="text-muted">2 jam yang lalu</span>
+            </div>
+            <a href="#" class="text-danger fw-semibold text-decoration-none">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3" style=" border-radius: 20px;">
+      <div class="card h-100 custom-card" >
+        <img src="assets/mainberita.png" class="card-img-top" alt="Berita">
+        <div class="card-body d-flex flex-column">
+          <h6 class="fw-bold mb-2">Pergerakan Saham Hari Ini Turun Drastis</h6>
+          <span class="badge bg-primary text-white fw-normal mb-2 small-badge">Pasar Saham</span>
+          <p class="text-muted small mb-4">Analis menjelaskan penyebab turunnya indeks saham akibat berbagai faktor global dan lokal.</p>
+          <div class="mt-auto d-flex justify-content-between align-items-center pt-2 border-top" style="font-size: 0.75rem;">
+            <div class="text-muted">
+              <strong>Rizky Putra</strong><br>
+              <span class="text-muted">2 jam yang lalu</span>
+            </div>
+            <a href="#" class="text-danger fw-semibold text-decoration-none">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3" style=" border-radius: 20px;">
+      <div class="card h-100 custom-card" >
+        <img src="assets/mainberita.png" class="card-img-top" alt="Berita">
+        <div class="card-body d-flex flex-column">
+          <h6 class="fw-bold mb-2">Pergerakan Saham Hari Ini Turun Drastis</h6>
+          <span class="badge bg-primary text-white fw-normal mb-2 small-badge">Pasar Saham</span>
+          <p class="text-muted small mb-4">Analis menjelaskan penyebab turunnya indeks saham akibat berbagai faktor global dan lokal.</p>
+          <div class="mt-auto d-flex justify-content-between align-items-center pt-2 border-top" style="font-size: 0.75rem;">
+            <div class="text-muted">
+              <strong>Rizky Putra</strong><br>
+              <span class="text-muted">2 jam yang lalu</span>
+            </div>
+            <a href="#" class="text-danger fw-semibold text-decoration-none">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3" style=" border-radius: 20px;">
+      <div class="card h-100 custom-card" >
+        <img src="assets/mainberita.png" class="card-img-top" alt="Berita">
+        <div class="card-body d-flex flex-column">
+          <h6 class="fw-bold mb-2">Pergerakan Saham Hari Ini Turun Drastis</h6>
+          <span class="badge bg-primary text-white fw-normal mb-2 small-badge">Pasar Saham</span>
+          <p class="text-muted small mb-4">Analis menjelaskan penyebab turunnya indeks saham akibat berbagai faktor global dan lokal.</p>
+          <div class="mt-auto d-flex justify-content-between align-items-center pt-2 border-top" style="font-size: 0.75rem;">
+            <div class="text-muted">
+              <strong>Rizky Putra</strong><br>
+              <span class="text-muted">2 jam yang lalu</span>
+            </div>
+            <a href="#" class="text-danger fw-semibold text-decoration-none">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3" style=" border-radius: 20px;">
+      <div class="card h-100 custom-card" >
+        <img src="assets/mainberita.png" class="card-img-top" alt="Berita">
+        <div class="card-body d-flex flex-column">
+          <h6 class="fw-bold mb-2">Pergerakan Saham Hari Ini Turun Drastis</h6>
+          <span class="badge bg-primary text-white fw-normal mb-2 small-badge">Pasar Saham</span>
+          <p class="text-muted small mb-4">Analis menjelaskan penyebab turunnya indeks saham akibat berbagai faktor global dan lokal.</p>
+          <div class="mt-auto d-flex justify-content-between align-items-center pt-2 border-top" style="font-size: 0.75rem;">
+            <div class="text-muted">
+              <strong>Rizky Putra</strong><br>
+              <span class="text-muted">2 jam yang lalu</span>
+            </div>
+            <a href="#" class="text-danger fw-semibold text-decoration-none">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3" style=" border-radius: 20px;">
+      <div class="card h-100 custom-card" >
+        <img src="assets/mainberita.png" class="card-img-top" alt="Berita">
+        <div class="card-body d-flex flex-column">
+          <h6 class="fw-bold mb-2">Pergerakan Saham Hari Ini Turun Drastis</h6>
+          <span class="badge bg-primary text-white fw-normal mb-2 small-badge">Pasar Saham</span>
+          <p class="text-muted small mb-4">Analis menjelaskan penyebab turunnya indeks saham akibat berbagai faktor global dan lokal.</p>
+          <div class="mt-auto d-flex justify-content-between align-items-center pt-2 border-top" style="font-size: 0.75rem;">
+            <div class="text-muted">
+              <strong>Rizky Putra</strong><br>
+              <span class="text-muted">2 jam yang lalu</span>
+            </div>
+            <a href="#" class="text-danger fw-semibold text-decoration-none">Baca Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    
+
+
+  </div>
+</div>
+<!-- Footer -->
+<footer class="pt-4 pb-3 mt-5" style="background-color: #d9d9d9;">
+  <div class="container">
+    <div class="row text-start">
+      <!-- Kolom 1 -->
+      <div class="col-md-3 mb-4">
+        <h6 class="fw-bold mb-3">TAUTAN</h6>
+        <ul class="list-unstyled small">
+          <li class="mb-2">
+            <i class="bi bi-globe2 me-2"></i>Winnicode
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-instagram me-2"></i>Instagram
+          </li>
+        </ul>
+      </div>
+      <!-- Kolom 2 -->
+      <div class="col-md-3 mb-4">
+        <h6 class="fw-bold mb-3">TAUTAN</h6>
+        <ul class="list-unstyled small">
+          <li class="mb-2">Beranda</li>
+          <li class="mb-2">Ekonomi Bisnis</li>
+          <li class="mb-2">Pasar Saham</li>
+          <li class="mb-2">Crypto</li>
+          <li class="mb-2">Industri</li>
+          <li class="mb-2">Infrastruktur</li>
+        </ul>
+      </div>
+      <!-- Kolom 3 -->
+      <div class="col-md-3 mb-4">
+        <h6 class="fw-bold mb-3">TAUTAN</h6>
+        <p class="small mb-1">E-Mail: winnicodegarudaofficial@gmail.com</p>
+        <p class="small mb-1">Alamat (Pusat): Bandung - Jl. Asia Afrika No.158,<br> Kb. Pisang, Kec. Sumur Bandung, Kota Bandung, Jawa Barat 40261</p>
+        <p class="small mb-1">Alamat (Cabang): Bantul, Yogyakarta</p>
+        <p class="small">Call Center: 6285159932501 (24 Jam)</p>
+      </div>
+      <!-- Kolom 4 -->
+      <div class="col-md-3 mb-4">
+        <div class="d-flex align-items-center justify-content-center mb-2">
+          <img src="assets/footer.png" alt="Winnicode Logo" style="height: 45px; margin-right: 10px;">
+          <img src="assets/merdeka.png" alt="Kampus Merdeka Logo" style="height: 45px;">
+        </div>
+        <p class="small text-center">
+          Jurnalistik Program winnicode adalah program pengembangan sumber daya manusia yang ditujukan bagi pemuda pemudi yang berkarir di dunia report.
+        </p>
+      </div>
+    </div>
+    <hr>
+    <div class="text-md-start text-center small text-muted">
+      Copyright © 2024 PT. WINNICODE GARUDA TEKNOLOGI
     </div>
   </div>
+</footer>
+
   
 
 <!-- Bootstrap JS -->
