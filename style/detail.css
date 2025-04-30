@@ -108,8 +108,6 @@ form i {
   border-radius: 20px;
 }
 
-
-
  
 
 /* ================= BUTTONS ================= */
@@ -142,160 +140,25 @@ form i {
     color: #6c757d;
 }
 
-
-
-
-/* ================= LIST BERITA TERKINI (SIDEBAR) ================= */
 .sidebar-wrapper {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.sidebar-card {
-    background: #fff;
-    border: 1px solid #dee2e6;
-    border-radius: 10px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.latest-news {
-    flex-grow: 1;
-    overflow-y: auto;
-    min-height: 0;
-}
-
-.news-item {
-    border-bottom: 1px solid #dee2e6;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-}
-
-.news-item:last-child {
-    border-bottom: none;
-}
-
-/* card sahaam */
-
-.custom-stock-card {
-    width: 120px;
-    height: 200px;
-    border: 2px solid #007bff;
-    border-radius: 12px;
-    padding: 15px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: 0.3s;
-    margin-left: 20px;
-  }
-  .custom-stock-card:hover {
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
-  }
-  .stock-title {
-    font-weight: bold;
-    font-size: 16px;
-  }
-  .stock-price {
-    font-weight: bold;
-    font-size: 18px;
-    color: #007bff;
-  }
-  .stock-change {
-    font-size: 14px;
-    margin-top: 10px;
-  }
-  .info-saham-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-  }
-  .custom-stock-card {
     border: 1px solid #ddd;
-    padding: 12px;
-    border-radius: 8px;
-    min-width: 150px;
-    text-align: center;
-    flex: 1 1 150px;
-  }
-
-  .stock-title {
-    font-weight: bold;
-  }
-
-  .stock-price {
-    font-size: 1.2em;
-    margin-bottom: 4px;
-  }
-
-  .stock-change {
-    font-size: 0.9em;
-  }
-
-  .btn-kecil {
-    font-size: 0.8rem;
-    padding: 10px 25px;
-    width: fit-content; 
-    margin-top: 1.5rem;
-    background-color: #f3363f;
+    border-radius: 12px;
+    padding: 20px;
+    background-color: #fff;
+    margin-top: 40px; /* Supaya agak turun */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Tambahan opsional agar lebih modern */
   }
   
-
-  .stock-nav {
-    gap: 20px;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    margin-bottom: 20px;
-    padding-left: 5px;
-  }
-
-
-/* indikator scrol di ilangin */
-.overflow-auto::-webkit-scrollbar {
-    height: 4px;
-  }
-  .overflow-auto::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.1); /* transparan hitam */
-    border-radius: 3px;
-  }
-  .overflow-auto::-webkit-scrollbar-track {
-    background: transparent;
-  }
-/* explore berita */
-  .custom-card {
-    border: 1.5px solid #ccc;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-
-  .custom-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  }
-
-  .small-badge {
-    font-size: 0.65rem;
-    width: fit-content;
-  }
   
-  footer {
-    background-color: #f2f2f2;
-    padding: 40px 0;
-  }
-  .card h6 {
-    font-size: 0.95rem;
-    line-height: 1.3;
-  }
-  .card p {
-    font-size: 0.8rem;
-  }
-  .logo-footer {
+  .comment-section .comment img {
+    width: 50px;
     height: 50px;
+    border-radius: 50%;       /* Supaya bulat */
+    object-fit: cover;        /* Supaya gambar tetap proporsional */
+    object-position: center;  /* Fokus tengah */
   }
+  
+
 
 
 

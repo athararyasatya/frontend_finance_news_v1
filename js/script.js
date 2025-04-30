@@ -1,14 +1,18 @@
-const stockData = [
+document.addEventListener('DOMContentLoaded', function () {
+  const stockData = [
     { name: 'LQ45', price: 722.69, change: 5.45, percent: 0.76 },
     { name: 'BBCA', price: 8500, change: 25, percent: 0.29 },
     { name: 'TLKM', price: 4300, change: -10, percent: -0.23 },
     { name: 'BBRI', price: 5000, change: 15, percent: 0.30 },
     { name: 'BMRI', price: 6100, change: -5, percent: -0.08 },
     { name: 'ASII', price: 6000, change: 20, percent: 0.34 }
-    
   ];
 
   const stockCardsContainer = document.getElementById('stock-cards');
+  if (!stockCardsContainer) {
+    console.error('stock-cards tidak ditemukan!');
+    return;
+  }
 
   stockData.forEach(stock => {
     const card = document.createElement('div');
@@ -26,3 +30,4 @@ const stockData = [
     `;
     stockCardsContainer.appendChild(card);
   });
+});
