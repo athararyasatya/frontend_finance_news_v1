@@ -30,8 +30,11 @@
       <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3"></i>
     </form>
     <div class="d-flex">
-      <a href="#" class="btn btn-pink me-2">Daftar</a>
-      <a href="#" class="btn btn-outline-light">Masuk</a>
+      <!-- Tombol Daftar membuka popup register -->
+      <a href="#" class="btn btn-pink me-2" data-bs-toggle="modal" data-bs-target="#registerModal">Daftar</a>
+      
+      <!-- Tombol Masuk membuka popup login -->
+      <a href="#" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#loginModal">Masuk</a>
     </div>
   </div>
 </nav>
@@ -107,84 +110,160 @@
         <h5 class="fw-bold mb-3">Komentar (3)</h5>
     
         <!-- Formulir Komentar -->
-        <div class="bg-white p-3 rounded mb-4">
-        <textarea class="form-control border-0" rows="3" placeholder="Tulis Komentar" maxlength="1000"></textarea>
-        <div class="d-flex justify-content-between align-items-center mt-2">
-            <small class="text-muted">1000 Karakter</small>
-            <button class="btn btn-dark btn-sm">Kirim &nbsp; &gt;</button>
-        </div>
-        </div>
-    
-    <!-- Urutan -->
-    <button class="btn btn-sm btn-dark mb-3 px-3 py-1 rounded-pill">Terbaru</button>
-  
-        <!-- Daftar Komentar -->
-     <div class="comment mb-4 pb-3 border-bottom">
-        <div class="d-flex">
-            <img src="assets/user2.png" class="avatar-img me-3" alt="Avatar">
-            <div>
-            <h6 class="fw-bold mb-0">Meguri Fujiura</h6>
-            <small class="text-muted">1 jam lalu</small>
-            <p class="mb-1 mt-1">I'm lion pizza chiken yes yes</p>
-             <div class="d-flex gap-3 text-muted small">
-                <span>👍 0</span>
-                <span>💬 0</span>
-                <span><a href="#" class="text-muted text-decoration-none">Balas</a></span>
-             </div>
+        <div class="container py-5">
+          <!-- Tombol Berikan Komentar -->
+          <div class="text-start mb-3">
+            <button class="custom-comment-btn" data-bs-toggle="modal" data-bs-target="#loginModal">
+              🗨️ Berikan Komentar
+            </button>
+          </div>
+          
+        
+          <!-- Formulir Komentar (disembunyikan default) -->
+          <div id="commentForm" class="bg-white p-3 rounded mb-4 d-none">
+            <textarea class="form-control border-0" rows="3" placeholder="Tulis Komentar" maxlength="1000"></textarea>
+            <div class="d-flex justify-content-between align-items-center mt-2">
+              <small class="text-muted">1000 Karakter</small>
+              <button class="btn btn-dark btn-sm">Kirim &nbsp; &gt;</button>
             </div>
-        </div>
-        </div>
-        <!-- Isi komentar yes yes-->
-        <div class="comment mb-4 pb-3 border-bottom">
-        <div class="d-flex">
-            <img src="assets/user1.png" class="avatar-img me-3" alt="Avatar">
-
-            <div>
-            <h6 class="fw-bold mb-0">Rei Kimaki</h6>
-            <small class="text-muted">1 jam lalu</small>
-            <p class="mb-1 mt-1">IHSG nak meletup</p>
-            <div class="d-flex gap-3 text-muted small">
-                <span>👍 0</span>
-                <span>💬 0</span>
-                <span><a href="#" class="text-muted text-decoration-none">Balas</a></span>
-            </div>
-            </div>
-        </div>
-        </div>
-
-        <div class="comment mb-4 pb-3 border-bottom">
+          </div>
+        
+          <!-- Judul Komentar -->
+          <h5 class="fw-bold mb-3 mt-4">Komentar (3)</h5>
+          <button class="btn btn-sm btn-dark mb-3 px-3 py-1 rounded-pill">Terbaru</button>
+        
+          <!-- Komentar 1 -->
+          <div class="comment mb-4 pb-3 border-bottom">
             <div class="d-flex">
-            <img src="assets/user3.png" class="avatar-img me-3" alt="Avatar">
-    
-            <div>
+              <img src="assets/user2.png" class="avatar-img me-3" alt="Avatar">
+              <div>
+                <h6 class="fw-bold mb-0">Meguri Fujiura</h6>
+                <small class="text-muted">1 jam lalu</small>
+                <p class="mb-1 mt-1">I'm lion pizza chiken yes yes</p>
+                <div class="d-flex gap-3 text-muted small">
+                  <span>👍 0</span>
+                  <span>💬 0</span>
+                  <span><a href="#" class="text-muted text-decoration-none">Balas</a></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Komentar 2 -->
+          <div class="comment mb-4 pb-3 border-bottom">
+            <div class="d-flex">
+              <img src="assets/user1.png" class="avatar-img me-3" alt="Avatar">
+              <div>
+                <h6 class="fw-bold mb-0">Rei Kimaki</h6>
+                <small class="text-muted">1 jam lalu</small>
+                <p class="mb-1 mt-1">IHSG nak meletup</p>
+                <div class="d-flex gap-3 text-muted small">
+                  <span>👍 0</span>
+                  <span>💬 0</span>
+                  <span><a href="#" class="text-muted text-decoration-none">Balas</a></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Komentar 3 -->
+          <div class="comment mb-4 pb-3 border-bottom">
+            <div class="d-flex">
+              <img src="assets/user3.png" class="avatar-img me-3" alt="Avatar">
+              <div>
                 <h6 class="fw-bold mb-0">Mina Kitano</h6>
                 <small class="text-muted">1 jam lalu</small>
-                <p class="mb-1 mt-1">Prabowo balap lari di pasuruan </p>
+                <p class="mb-1 mt-1">Prabowo balap lari di pasuruan</p>
                 <div class="d-flex gap-3 text-muted small">
-                <span>👍 0</span>
-                <span>💬 0</span>
-                <span><a href="#" class="text-muted text-decoration-none">Balas</a></span>
+                  <span>👍 0</span>
+                  <span>💬 0</span>
+                  <span><a href="#" class="text-muted text-decoration-none">Balas</a></span>
                 </div>
+              </div>
             </div>
-            </div>
-        </div>
-
-        <div class="comment mb-4 pb-3 border-bottom">
+          </div>
+        
+          <!-- Komentar 4 -->
+          <div class="comment mb-4 pb-3 border-bottom">
             <div class="d-flex">
-            <img src="assets/user4.png" class="avatar-img me-3" alt="Avatar">
-    
-            <div>
+              <img src="assets/user4.png" class="avatar-img me-3" alt="Avatar">
+              <div>
                 <h6 class="fw-bold mb-0">Uno Kanaya</h6>
                 <small class="text-muted">1 jam lalu</small>
                 <p class="mb-1 mt-1">Prabowo main lompat tali</p>
                 <div class="d-flex gap-3 text-muted small">
-                <span>👍 0</span>
-                <span>💬 0</span>
-                <span><a href="#" class="text-muted text-decoration-none">Balas</a></span>
+                  <span>👍 0</span>
+                  <span>💬 0</span>
+                  <span><a href="#" class="text-muted text-decoration-none">Balas</a></span>
                 </div>
-                </div>
-                </div>
+              </div>
             </div>
+          </div>
+        </div>
+        
+        <!-- Modal Login Bootstrap -->
+        <!-- ... (bagian komentar tetap sama, tidak diubah) -->
+
+<!-- Modal Login Bootstrap -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content p-3">
+      <div class="row g-0">
+        <!-- Gambar kiri -->
+        <div class="col-md-6 d-none d-md-block">
+          <img src="assets/iconlogin.png" alt="News" class="img-fluid h-100 w-100" style="object-fit: cover;">
+        </div>
+        <!-- Form kanan -->
+        <div class="col-md-6 p-4 d-flex flex-column justify-content-center">
+          <div class="text-center mb-4">
+            <img src="assets/subiconlogin.png" width="100" alt="Logo">
+            <h5 class="fw-bold mt-3">LOG IN</h5>
+          </div>
+          <form>
+            <input type="email" class="form-control mb-3" placeholder="Email Address">
+            <input type="password" class="form-control mb-3" placeholder="Password">
+            <button type="button" class="btn btn-primary w-100" id="loginBtn">Let's Start!</button>
+            <p class="text-center mt-3 small">Don’t have an account? 
+              <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal">Sign Up</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ Modal Register -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content p-3">
+      <div class="row g-0">
+        <!-- Ilustrasi di kiri -->
+        <div class="col-md-6 d-none d-md-flex align-items-center justify-content-center bg-light">
+          <img src="assets/iconregister.png" alt="Register Illustration" class="img-fluid p-4" />
+        </div>
+
+        <!-- Formulir kanan -->
+        <div class="col-md-6 p-4 d-flex flex-column justify-content-center">
+          <div class="text-center mb-4">
+            <img src="assets/subiconlogin.png" width="80" alt="Logo">
+            <h5 class="fw-bold mt-2">Create Account</h5>
+          </div>
+          <form>
+            <input type="text" class="form-control mb-3" placeholder="Name">
+            <input type="email" class="form-control mb-3" placeholder="Email Address">
+            <input type="password" class="form-control mb-4" placeholder="Password">
+            <button type="submit" class="btn btn-primary w-100">Create Account</button>
+            <p class="text-center mt-3 small">Already have an account? 
+              <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">Login</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
         </div>
     </div>
 
@@ -324,7 +403,8 @@
   
 
 <!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 <script src="js/script.js"></script>
 </body>
 </html>
